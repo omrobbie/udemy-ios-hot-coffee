@@ -14,6 +14,7 @@
 		FCA09F9B23069C7F00AF2F5E /* OrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA09F9A23069C7F00AF2F5E /* OrderTableViewController.swift */; };
 		FCA09F9D23069CB800AF2F5E /* AddOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA09F9C23069CB800AF2F5E /* AddOrderViewController.swift */; };
 		FCA09FA02306D29800AF2F5E /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA09F9F2306D29800AF2F5E /* WebService.swift */; };
+		FCA09FA32306D58D00AF2F5E /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA09FA22306D58D00AF2F5E /* Order.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FCA09F9A23069C7F00AF2F5E /* OrderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewController.swift; sourceTree = "<group>"; };
 		FCA09F9C23069CB800AF2F5E /* AddOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderViewController.swift; sourceTree = "<group>"; };
 		FCA09F9F2306D29800AF2F5E /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		FCA09FA22306D58D00AF2F5E /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		FCA09F8623069AD000AF2F5E /* HotCoffee */ = {
 			isa = PBXGroup;
 			children = (
+				FCA09FA12306D57E00AF2F5E /* Models */,
 				FCA09F9923069C6700AF2F5E /* Controllers */,
 				FCA09F9E2306D28400AF2F5E /* Services */,
 				FCA09F8723069AD000AF2F5E /* AppDelegate.swift */,
@@ -84,6 +87,14 @@
 				FCA09F9F2306D29800AF2F5E /* WebService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		FCA09FA12306D57E00AF2F5E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FCA09FA22306D58D00AF2F5E /* Order.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +170,7 @@
 			files = (
 				FCA09F9B23069C7F00AF2F5E /* OrderTableViewController.swift in Sources */,
 				FCA09F8823069AD000AF2F5E /* AppDelegate.swift in Sources */,
+				FCA09FA32306D58D00AF2F5E /* Order.swift in Sources */,
 				FCA09FA02306D29800AF2F5E /* WebService.swift in Sources */,
 				FCA09F9D23069CB800AF2F5E /* AddOrderViewController.swift in Sources */,
 			);
