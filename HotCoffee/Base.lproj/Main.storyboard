@@ -52,14 +52,61 @@
                     <view key="view" contentMode="scaleToFill" id="4cv-rz-N8w">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Bd-ol-zHG">
+                                <rect key="frame" x="0.0" y="88" width="414" height="448"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="z9D-Ts-gfa">
+                                <rect key="frame" x="111.5" y="562" width="191" height="29"/>
+                                <segments>
+                                    <segment title="Small"/>
+                                    <segment title="Medium"/>
+                                    <segment title="Large"/>
+                                </segments>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hxo-Ez-Bpu">
+                                <rect key="frame" x="107" y="644" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="dfL-bt-ewS"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="quC-ZI-19a">
+                                <rect key="frame" x="107" y="682" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="suS-Za-8e3"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Hxo-Ez-Bpu" firstAttribute="centerX" secondItem="4cv-rz-N8w" secondAttribute="centerX" id="31O-Kc-rOG"/>
+                            <constraint firstItem="quC-ZI-19a" firstAttribute="centerX" secondItem="4cv-rz-N8w" secondAttribute="centerX" id="AzC-yv-dEX"/>
+                            <constraint firstItem="quC-ZI-19a" firstAttribute="top" secondItem="Hxo-Ez-Bpu" secondAttribute="bottom" constant="8" id="MD5-7a-eHU"/>
+                            <constraint firstItem="5Bd-ol-zHG" firstAttribute="leading" secondItem="2Xg-K6-yeA" secondAttribute="leading" id="S6I-vx-ybG"/>
+                            <constraint firstItem="5Bd-ol-zHG" firstAttribute="width" secondItem="4cv-rz-N8w" secondAttribute="width" id="Tm7-au-CmK"/>
+                            <constraint firstItem="z9D-Ts-gfa" firstAttribute="top" secondItem="5Bd-ol-zHG" secondAttribute="bottom" constant="26" id="VFR-UT-XV5"/>
+                            <constraint firstItem="z9D-Ts-gfa" firstAttribute="centerX" secondItem="4cv-rz-N8w" secondAttribute="centerX" id="XV3-Jj-YgK"/>
+                            <constraint firstItem="5Bd-ol-zHG" firstAttribute="top" secondItem="2Xg-K6-yeA" secondAttribute="top" id="bF3-AR-tK2"/>
+                            <constraint firstItem="Hxo-Ez-Bpu" firstAttribute="top" secondItem="z9D-Ts-gfa" secondAttribute="bottom" constant="54" id="eBS-wo-zSL"/>
+                            <constraint firstItem="5Bd-ol-zHG" firstAttribute="height" secondItem="4cv-rz-N8w" secondAttribute="height" multiplier="0.5" id="qfP-it-Vuh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2Xg-K6-yeA"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add New Order" id="fk7-Tg-gDF"/>
+                    <navigationItem key="navigationItem" title="Add New Order" id="fk7-Tg-gDF">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="psN-n2-Cfc"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="YYL-lr-F0y"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6qI-wP-lro" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2395.6521739130435" y="28.794642857142854"/>
+            <point key="canvasLocation" x="2394.202898550725" y="28.794642857142854"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bMq-b4-804">
