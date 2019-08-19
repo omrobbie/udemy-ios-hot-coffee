@@ -17,6 +17,15 @@ class OrderTableViewController: UITableViewController {
         populateOrders()
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let navC = segue.destination as? UINavigationController,
+        let addCoffeeOrderVC = navC.viewControllers.first as? AddOrderViewController else {
+            fatalError("Error performing segue!")
+        }
+
+        addCoffeeOrderVC.delegate = self
+    }
+
     private func populateOrders() {
         WebService().load(resource: Order.all) { [weak self] result in
             switch result {
@@ -46,5 +55,21 @@ class OrderTableViewController: UITableViewController {
         cell.detailTextLabel?.text = item.size
 
         return cell
+    }
+}
+
+extension OrderTableViewController: AddCofeeOrderDelegate {
+
+    func addCoffeeOrderViewControllerDidSave(order: Order, controller: UIViewController) {
+        controller.dismiss(animated: true, completion: nil)
+
+        let orderViewModel = OrderViewModel(order: order)
+
+        orderListViewModel.orderViewModel.append(orderViewModel)
+        tableView.insertRows(at: [IndexPath.init(row: orderListViewModel.orderViewModel.count - 1, section: 0)], with: .automatic)
+    }
+
+    func addCoffeeOrderViewControllerDidClose(controller: UIViewController) {
+        controller.dismiss(animated: true, completion: nil)
     }
 }

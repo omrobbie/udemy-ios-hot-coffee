@@ -120,7 +120,11 @@
                         <viewLayoutGuide key="safeArea" id="2Xg-K6-yeA"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Order" id="fk7-Tg-gDF">
-                        <barButtonItem key="leftBarButtonItem" title="Close" id="psN-n2-Cfc"/>
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="psN-n2-Cfc">
+                            <connections>
+                                <action selector="closeButton:" destination="ezH-hT-qGc" id="czX-sd-Hcb"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="YYL-lr-F0y">
                             <connections>
                                 <action selector="saveButton:" destination="ezH-hT-qGc" id="qmp-aO-PJS"/>
