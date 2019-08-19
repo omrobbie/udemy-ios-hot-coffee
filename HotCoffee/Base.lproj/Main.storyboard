@@ -72,6 +72,20 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Bd-ol-zHG">
                                 <rect key="frame" x="0.0" y="88" width="414" height="448"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CoffeeTypeTableViewCell" id="lbw-RY-O2n">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lbw-RY-O2n" id="iWT-NZ-8yP">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ezH-hT-qGc" id="MkD-LT-6bN"/>
+                                    <outlet property="delegate" destination="ezH-hT-qGc" id="scn-5a-Adl"/>
+                                </connections>
                             </tableView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="z9D-Ts-gfa">
                                 <rect key="frame" x="111.5" y="562" width="191" height="29"/>
@@ -119,6 +133,9 @@
                         <barButtonItem key="leftBarButtonItem" title="Close" id="psN-n2-Cfc"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="YYL-lr-F0y"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="5Bd-ol-zHG" id="pTO-NE-R4O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6qI-wP-lro" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
