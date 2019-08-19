@@ -13,9 +13,21 @@ class AddOrderViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
     private var viewModel = AddCoffeeOrderViewModel()
+    private var coffeeSizesSegmentedControl: UISegmentedControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        setupEnv()
+    }
+
+    private func setupEnv() {
+        coffeeSizesSegmentedControl = UISegmentedControl(items: viewModel.sizes)
+        coffeeSizesSegmentedControl.translatesAutoresizingMaskIntoConstraints = false
+
+        view.addSubview(coffeeSizesSegmentedControl)
+        coffeeSizesSegmentedControl.topAnchor.constraint(equalTo: tableView.bottomAnchor, constant: 20).isActive = true
+        coffeeSizesSegmentedControl.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     }
 }
 

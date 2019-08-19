@@ -87,14 +87,6 @@
                                     <outlet property="delegate" destination="ezH-hT-qGc" id="scn-5a-Adl"/>
                                 </connections>
                             </tableView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="z9D-Ts-gfa">
-                                <rect key="frame" x="111.5" y="562" width="191" height="29"/>
-                                <segments>
-                                    <segment title="Small"/>
-                                    <segment title="Medium"/>
-                                    <segment title="Large"/>
-                                </segments>
-                            </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hxo-Ez-Bpu">
                                 <rect key="frame" x="107" y="644" width="200" height="30"/>
                                 <constraints>
@@ -121,10 +113,8 @@
                             <constraint firstItem="quC-ZI-19a" firstAttribute="top" secondItem="Hxo-Ez-Bpu" secondAttribute="bottom" constant="8" id="MD5-7a-eHU"/>
                             <constraint firstItem="5Bd-ol-zHG" firstAttribute="leading" secondItem="2Xg-K6-yeA" secondAttribute="leading" id="S6I-vx-ybG"/>
                             <constraint firstItem="5Bd-ol-zHG" firstAttribute="width" secondItem="4cv-rz-N8w" secondAttribute="width" id="Tm7-au-CmK"/>
-                            <constraint firstItem="z9D-Ts-gfa" firstAttribute="top" secondItem="5Bd-ol-zHG" secondAttribute="bottom" constant="26" id="VFR-UT-XV5"/>
-                            <constraint firstItem="z9D-Ts-gfa" firstAttribute="centerX" secondItem="4cv-rz-N8w" secondAttribute="centerX" id="XV3-Jj-YgK"/>
+                            <constraint firstItem="2Xg-K6-yeA" firstAttribute="bottom" secondItem="quC-ZI-19a" secondAttribute="bottom" constant="150" id="UID-Jy-Swm"/>
                             <constraint firstItem="5Bd-ol-zHG" firstAttribute="top" secondItem="2Xg-K6-yeA" secondAttribute="top" id="bF3-AR-tK2"/>
-                            <constraint firstItem="Hxo-Ez-Bpu" firstAttribute="top" secondItem="z9D-Ts-gfa" secondAttribute="bottom" constant="54" id="eBS-wo-zSL"/>
                             <constraint firstItem="5Bd-ol-zHG" firstAttribute="height" secondItem="4cv-rz-N8w" secondAttribute="height" multiplier="0.5" id="qfP-it-Vuh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2Xg-K6-yeA"/>
