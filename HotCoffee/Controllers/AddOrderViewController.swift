@@ -11,6 +11,8 @@ import UIKit
 class AddOrderViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
 
     private var viewModel = AddCoffeeOrderViewModel()
     private var coffeeSizesSegmentedControl: UISegmentedControl!
@@ -28,6 +30,22 @@ class AddOrderViewController: UIViewController {
         view.addSubview(coffeeSizesSegmentedControl)
         coffeeSizesSegmentedControl.topAnchor.constraint(equalTo: tableView.bottomAnchor, constant: 20).isActive = true
         coffeeSizesSegmentedControl.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+    }
+
+    @IBAction func saveButton(_ sender: Any) {
+        let name = nameTextField.text
+        let email = emailTextField.text
+
+        let selectedSize = coffeeSizesSegmentedControl.titleForSegment(at: coffeeSizesSegmentedControl.selectedSegmentIndex)
+
+        guard let indexPath = tableView.indexPathForSelectedRow else {
+            fatalError("Error in selecting coffee!")
+        }
+
+        viewModel.name = name
+        viewModel.email = email
+        viewModel.selectedSize = selectedSize
+        viewModel.selectedType = viewModel.types[indexPath.row]
     }
 }
 
